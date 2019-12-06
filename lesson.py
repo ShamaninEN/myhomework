@@ -17,8 +17,8 @@ print(f'Выводим в формате чч:мм:сс, {hours}:{minutes}:{seco
 
 #третье задание
 
-value = int(input('введите число: '))
-summa = value + value ** 2 + value ** 3
+value = input('введите число: ')
+summa = int(value) + int(value * 2) + int(value * 3)
 print(f'Найходим сумму чисел n + nn + nnn, {summa}')
 
 #четвертое задание
@@ -40,9 +40,9 @@ costs = int(input('введите расходы: '))
 if proceeds > costs:
     # print('у вас прибыль')
     profit = proceeds - costs
-    print(f'Ваша рентабильность выручки: {profit/proceeds}')
+    print(f'Ваша рентабильность выручки: {profit/proceeds:.2f}')
     workers = int(input('Численность работников: '))
-    print(f'Прибыль на одного сотрудника: {profit / workers}')
+    print(f'Прибыль на одного сотрудника: {profit / workers:.2f}')
 else:
     print('У вас убыток')
 
