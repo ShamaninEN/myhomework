@@ -95,3 +95,42 @@ else:
                 i = i + 1
 my_list_5.reverse()
 print(my_list_5)
+
+# шестое задание
+
+products = []
+possibility = True
+number = 0
+while possibility:
+    product = {}
+    product['название'] = input('Введите наименование товара: ')
+    try:
+        product['цена'] = int(input('Введите цену товара: '))
+    except:
+        print('Пожалуйста введите целое число')
+        product['цена'] = int(input('Введите цену товара: '))
+    try:
+        product['количество'] = int(input('Введите количество товара: '))
+    except:
+        print('Пожалуйста введите целое число')
+        product['количество'] = int(input('Введите количество товара: '))
+    product['ед'] = input('Введите единицу измерения товара: ')
+    number = number + 1
+    my_tuple = (number, product)
+    products.append(my_tuple)
+    possibility = input('Будет еще товар? если нет просто нажмите Enter: ')
+print(f'Вывели список товаров {products}')
+products_name = []
+products_cost = []
+products_quantity = []
+products_unit = []
+for value in products:
+    products_name.append(value[1]['название'])
+    products_cost.append(value[1]['цена'])
+    products_quantity.append(value[1]['количество'])
+    try:
+        products_unit.index(value[1]['ед'])
+    except:
+        products_unit.append(value[1]['ед'])
+statistic = {'название': products_name, 'цена': products_cost, 'количество': products_quantity, 'ед': products_unit}
+print(f'Посмотрите статистику {statistic}')
