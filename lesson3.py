@@ -49,7 +49,7 @@ def my_func(x, y, z):
     return a
 
 
-print(my_func(5, 2, 3))
+print(my_func(5, 5, 5))
 
 # fourth task
 print('fourth task')
