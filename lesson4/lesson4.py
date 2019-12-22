@@ -32,7 +32,7 @@ from functools import reduce
 def reducer_func(el_prev, el):
     # el_prev — предшествующий элемент
     # el — текущий элемент
-    return el_prev + el
+    return el_prev * el
 
 
 my_list_for_five_task = [el for el in range(100, 1001, 2)]
